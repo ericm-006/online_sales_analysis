@@ -13,3 +13,16 @@ manager.add_product(p3)
 
 manager.display_products()
 print("Ukupna vrednost:", manager.total_value())
+
+
+
+from cart import Cart
+
+cart = Cart()
+
+cart.add_to_cart(p1)
+cart.add_to_cart(p2)
+cart.add_to_cart(p3)
+
+cart.display_cart()
+print("Ukupno za naplatu:", cart.total_price())
