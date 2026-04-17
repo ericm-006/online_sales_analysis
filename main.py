@@ -1,5 +1,6 @@
 from product import Product
 from product_manager import ProductManager
+from cart import Cart
 
 manager = ProductManager()
 
@@ -11,7 +12,11 @@ manager.add_product(p1)
 manager.add_product(p2)
 manager.add_product(p3)
 
-# manager.display_products()
-# print("Ukupna vrednost:", manager.total_value())
+cart = Cart()
 
+cart.add_to_cart(p1)
+cart.add_to_cart(p2)
+cart.add_to_cart(p3)
 
+cart.display_cart()
+print("Ukupno za naplatu:", cart.total_price())
